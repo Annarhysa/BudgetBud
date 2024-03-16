@@ -30,5 +30,20 @@ data_monthly_category = data.set_index(['month','category']).copy()
 data_monthly_category = data_monthly_category.groupby(level=[0,1],sort=False)['amount'].sum() * -1
 data_monthly_category = data_monthly_category[data_monthly_category>0]
 
-data_by_month.to_json('data/data_by_month.json')
-data_by_category.to_json('data/data_by_category.json')
+#converting json object of data_monthly_category
+series = pd.Series(data_monthly_category)
+
+df = series.reset_index()
+df.columns = ['Month', 'Category', 'Value']
+
+# Convert the DataFrame to the desired JSON format
+result = {}
+for index, row in df.iterrows():
+    month_data = result.setdefault(row['Month'], {})
+    month_data[row['Category'].lower()] = row['Value']
+
+result = pd.DataFrame(result)
+
+result.to_json('data/json_data_monthly_category.json')
+data_by_month.to_json('data/json_data_by_month.json')
+data_by_category.to_json('data/json_data_by_category.json')
