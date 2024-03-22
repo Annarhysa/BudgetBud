@@ -21,6 +21,27 @@ In the complex financial landscape, people face challenges managing finances due
 ## User Process Flow Diagram
 ![logo](static/images/image.png)
 
+## How to use repository
+Prerequisites: Python, Git
+Suggestion: Create a virtual environment for nothing to break in your local system
+  ```bash
+  python -m venv finance
+```
+Here are some of the terminal commands to be followed
+1. Clone this repository in your local system
+   ```bash
+   git clone https://github.com/Annarhysa/BudgetBud.git
+
+2. Install all the libraries:
+   ```bash
+   pip install -r requirements.txt
+
+3. Run the application:
+   ```bash
+   python app.py
+
+The app should be up and running on your localhost URL in the browser.
+
 ## Scope
 - Integration of AI algorithms for data analysis and portfolio management
 - Implementation of educational resources and interactive tools
@@ -30,15 +51,9 @@ In the complex financial landscape, people face challenges managing finances due
 - Continuous updates and improvements based on user feedback and market trends
 
 ## Tech stack
-- Python : Numpy , Pandas
-- Flask
-- CSS
-- HTML
-- JavaScript
-- BootStrap
-- Google charts
-- GeminiAI api
-- SupaBase
-- ApexCharts.js
-- Heroku
+- Python (for analysis): Numpy, Pandas
+- Backend: Flask, JavaScript, SupaBase
+- Frontend: HTML, CSS, BootStrap, JavaScript
+- Other Libraries used: Google Charts, GeminiAI API, ApexCharts.js
+- Deployment: Heroku
 
