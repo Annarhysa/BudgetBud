@@ -38,7 +38,7 @@ Here are some of the terminal commands to be followed
 
 3. Run the application:
    ```bash
-   python app.py
+   python app-test.py
 
 The app should be up and running on your localhost URL in the browser.
 
